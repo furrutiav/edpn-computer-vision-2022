@@ -27,12 +27,12 @@ Resolver dos problemas distintos de EDP en procesamiento de imagenes, focalizand
 [[1]](https://dl.acm.org/doi/abs/10.1145/344779.344972)
 Bertalmio, M., Sapiro, G., Caselles, V., & Ballester, C. (2000, July). Image inpainting. In Proceedings of the 27th annual conference on Computer graphics and interactive techniques (pp. 417-424)
 
-[[2]](https://publikationen.sulb.uni-saarland.de/bitstream/20.500.11880/26267/1/preprint_61_02.pdf)
+[[2]](https://link.springer.com/chapter/10.1007/0-387-21810-6_3)
 Weickert, J., & Kühne, G. (2003). Fast methods for implicit active contour models. In Geometric level set methods in imaging, vision, and graphics (pp. 43-57). Springer, New York, NY.
 
-[[3]](http://journals.du.ac.in/ugresearch/pdf-vol3/U13.pdf)
+[[3]](https://www.researchgate.net/publication/311103980_Fast_Dynamic_Image_Restoration_using_Laplace_equation_Based_Image_Inpainting)
 Agrawal, N., Sinha, P., Kumar, A., & Bagai, S. (2015). Fast & dynamic image restoration using Laplace equation based image inpainting. J Undergraduate Res Innovation, 1(2), 115-123.
 
-[[4]](https://link.springer.com/content/pdf/10.1007/978-3-540-33267-1_12.pdf)
+[[4]](https://link.springer.com/chapter/10.1007/978-3-540-33267-1_12?noAccess=true)
 Frick, K., & Scherzer, O. (2007). Application of non-convex bv regularization for image segmentation. In Image Processing Based on Partial Differential Equations (pp. 211-228). Springer, Berlin, Heidelberg.
 
