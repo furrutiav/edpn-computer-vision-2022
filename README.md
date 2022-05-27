@@ -1,8 +1,8 @@
 # Segmentación y pintado de imágenes
 
-Análisis Numérico de Ecuaciones en Derivadas Parciales: Teoría y Laboratorio
+*Análisis Numérico de Ecuaciones en Derivadas Parciales: Teoría y Laboratorio*
 
-Integrantes: 
+**Integrantes** 
 * Daniel Minaya, 
 * Sebastián Toloza, 
 * Felipe Urrutia
@@ -15,12 +15,22 @@ Resolver dos problemas distintos de EDP en procesamiento de imagenes, focalizand
 
 <img src="https://github.com/furrutiav/edpn-computer-vision-2022/blob/main/Esquema.png" alt="drawing" width="650"/>
 
-## Segmentacion de imagenes
+## Segmentación de imagenes
 
 [Notebook](https://github.com/furrutiav/edpn-computer-vision-2022/blob/main/01%20Level-set%20Image%20segmentation.ipynb)
 
 ## Pintado de imagenes
 [Notebook]()
+
+## Futuras tareas
+
+*Ordenadas según prioridad*
+- [ ] Optimizar el codigo de [Segmentación de imagenes](https://github.com/furrutiav/edpn-computer-vision-2022/blob/main/01%20Level-set%20Image%20segmentation.ipynb) (Daniel)
+- [ ] Búsqueda de imagenes test. Estudiar [dataset](https://www2.eecs.berkeley.edu/Research/Projects/CS/vision/bsds/) (Seba)
+- [ ] Grid-search de hiper-parametros (tau, k, sigma, lambda)
+- [ ] Implementación de inpainting
+
+
 
 ## Referencias
 
