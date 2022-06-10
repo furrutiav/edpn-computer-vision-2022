@@ -17,8 +17,11 @@ Resolver dos problemas distintos de EDP en procesamiento de imagenes, focalizand
 
 ## Segmentación de imagenes
 
-[Notebook](https://github.com/furrutiav/edpn-computer-vision-2022/blob/main/01%20Level-set%20Image%20segmentation.ipynb)
+[Notebook: BP](https://github.com/furrutiav/edpn-computer-vision-2022/blob/main/01%20Level-set%20Image%20segmentation.ipynb)
 
+<img src="https://github.com/furrutiav/edpn-computer-vision-2022/blob/main/matplot003.gif">
+
+[Notebook: PASCAL](https://github.com/furrutiav/edpn-computer-vision-2022/blob/main/02%20Level-set%20Image%20segmentation.ipynb)
 ## Pintado de imagenes
 [Notebook]()
 
