@@ -7,7 +7,7 @@
 * Sebastián Toloza, 
 * Felipe Urrutia
 
-## Propuesta proyecto
+## Propuesta pre-proyecto
 
 Resolver dos problemas distintos de EDP en procesamiento de imagenes, focalizando nuestro trabajo en el primero. (1) Segmentacion de imagenes (Image segmentation) y (2) Pintado de imagenes (Inpainting). La idea principal es utilizar (1) para encontrar un elemento de alto constraste sobre la imagen para luego aplicar (2) con la intencion de borrar dicho elemento preservando la informacion del borde. Para resolver (1) consideramos el metodo Level-set propuesto en [4, 2]. Mientras que para resolver (2) consideramos un metodo sencillo utilizando la ecuacion de Laplace [3]. Si durante el transcuso del proyecto logramos resolver satisfactoriamente el problema (1) y podemos mejorar el problema (2), entonces consideraremos una mejor aproximacion (2) con el modelo propuesto en [1].
 
