@@ -13,12 +13,12 @@ from scipy.ndimage.filters import gaussian_filter
 from scipy.ndimage import convolve
 import time
 import pickle
-import numba 
 from matplotlib.colors import ListedColormap
 from skimage.transform import resize
 from PIL import Image, ImageOps 
 import cv2
 from matplotlib import animation
+import os
 #-
 
 # Funciones auxiliares
