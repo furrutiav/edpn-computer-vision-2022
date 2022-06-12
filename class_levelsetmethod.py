@@ -230,7 +230,7 @@ class LevelSetMethod(object):
                 if i == 2:
                     if j == 0: ax[i, 0].set_xlabel(f"Desenfoque gaussiano", fontsize=18)
                     ax[i, j+1].set_xlabel(f"lambda={lmbd}", fontsize=18)  
-        plt.suptitle(f"Funcion de parada con desenfoque gaussiano de sigma\n en {list_sgm} y factor de contraste lambda en {list_lmbd}", size=18*1.5)
+        plt.suptitle(f"Función de parada con desenfoque gaussiano de sigma\n en {list_sgm} y factor de contraste lambda en {list_lmbd}", size=18*1.5)
         fig.tight_layout(h_pad=0.1, w_pad=0.1)
     def set_stopfunct(self, sgm, lmbd):
         print(f"""<set_stopfunct> sigma: {sgm}, lambda: {lmbd}""")
