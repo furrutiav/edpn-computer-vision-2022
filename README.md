@@ -13,13 +13,13 @@ Resolver dos problemas distintos de EDP en procesamiento de imagenes, focalizand
 
 **Figura 1.** *Esquema del procesamiento de una imagen*
 
-<img src="https://github.com/furrutiav/edpn-computer-vision-2022/blob/main/Esquema.png" alt="drawing" width="650"/>
+<!-- <img src="https://github.com/furrutiav/edpn-computer-vision-2022/blob/main/Esquema.png" alt="drawing" width="650"/> -->
 
 ## Segmentación de imagenes
 
 [Notebook: BP](https://github.com/furrutiav/edpn-computer-vision-2022/blob/main/01%20Level-set%20Image%20segmentation.ipynb)
 
-<img src="https://github.com/furrutiav/edpn-computer-vision-2022/blob/main/matplot003.gif">
+<!-- <img src="https://github.com/furrutiav/edpn-computer-vision-2022/blob/main/matplot003.gif"> -->
 
 [Notebook: PASCAL](https://github.com/furrutiav/edpn-computer-vision-2022/blob/main/02%20Level-set%20Image%20segmentation.ipynb)
 ## Pintado de imagenes
