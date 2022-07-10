@@ -17,7 +17,7 @@
 * [📄 Estudio del conjunto de imagenes de los Problemas de Bongard](https://github.com/furrutiav/edpn-computer-vision-2022/blob/main/01%20Level-set%20Image%20segmentation.ipynb)
 * [📄 Estudio del conjunto de datos PASCAL 2012 para la segmentacion de imagenes](https://github.com/furrutiav/edpn-computer-vision-2022/blob/main/02%20Level-set%20Image%20segmentation.ipynb)
 
-## Motivación [[3]](https://github.com/furrutiav/edpn-computer-vision-2022/main/README.md#referencias)
+## Motivación [[3]](https://github.com/furrutiav/edpn-computer-vision-2022#referencias)
 
 La segmentación de imágenes es un método utilizado para particionar una imagen en múltiples segmentos u objetos constituyentes, lo cual la hace un componente esencial en muchos sistemas de comprensión visual, tales como, por ejemplo, el análisis de imágenes médicas, imágenes satelitales, entre otros.  
 
@@ -85,7 +85,7 @@ un factor de contraste, $\kappa$ es
 un término constante de fuerza comparable a la fuerza de un globo y el término $\text{div}\left( \frac{\nabla u}{|\nabla u|} \right)$ hace 
 referencia a la curvatura media de la interfaz.
 
-## Diferencias Finitas [[4]](https://github.com/furrutiav/edpn-computer-vision-2022/main/README.md#referencias)
+## Diferencias Finitas [[4]](https://github.com/furrutiav/edpn-computer-vision-2022#referencias)
 
 La implementación en este caso viene descrita por la relación:
 
@@ -126,7 +126,7 @@ $$
             (\min(D^{-x}u_i^n,0)^2 + \max(D^{+x}u_i^n,0)^2  + \min(D^{-y}u_i^n,0)^2 + \max(D^{+y}u_i^n,0)^2     )^{1/2}
 $$
 
-## Imágenes Básicas [[1]](https://github.com/furrutiav/edpn-computer-vision-2022/main/README.md#referencias)
+## Imágenes Básicas [[1]](https://github.com/furrutiav/edpn-computer-vision-2022#referencias)
 
 <img width="400" src="https://github.com/furrutiav/edpn-computer-vision-2022/blob/main/BP_test_3.png">
 
@@ -136,7 +136,7 @@ $$
 
 <img width="400" src="https://github.com/furrutiav/edpn-computer-vision-2022/blob/main/BP_test_7.png">
 
-## Métricas [[2]](https://github.com/furrutiav/edpn-computer-vision-2022/main/README.md#referencias)
+## Métricas [[2]](https://github.com/furrutiav/edpn-computer-vision-2022#referencias)
 
 
 $$ 
