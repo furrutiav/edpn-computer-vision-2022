@@ -9,6 +9,14 @@
 * Daniel Minaya 
 * Sebastián Toloza
 
+**Presentación:** [🖼️ Aqui!](https://github.com/furrutiav/edpn-computer-vision-2022/blob/main/main.pdf)
+
+**Poster:** [🪧 Aqui!](https://github.com/furrutiav/edpn-computer-vision-2022/blob/main/Poster_de_proyecto_EDPN.pdf)
+
+**Notebooks:**
+* [📄 Estudio del conjunto de imagenes de los Problemas de Bongard](https://github.com/furrutiav/edpn-computer-vision-2022/blob/main/01%20Level-set%20Image%20segmentation.ipynb)
+* [📄 Estudio del conjunto de datos PASCAL 2012 para la segmentacion de imagenes](https://github.com/furrutiav/edpn-computer-vision-2022/blob/main/02%20Level-set%20Image%20segmentation.ipynb)
+
 ## Motivación [[3]](https://github.com/furrutiav/edpn-computer-vision-2022/main/README.md#referencias)
 
 La segmentación de imágenes es un método utilizado para particionar una imagen en múltiples segmentos u objetos constituyentes, lo cual la hace un componente esencial en muchos sistemas de comprensión visual, tales como, por ejemplo, el análisis de imágenes médicas, imágenes satelitales, entre otros.  
