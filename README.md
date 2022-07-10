@@ -154,3 +154,16 @@ al promedio armónico.
 
 [4] J. Weickert and G. Kühne. Fast methods for implicit active contour models. In Geometric level set methods in imaging, vision, and graphics. Springer, New York, NY, pages 43–57, 2003.
 
+## Citar
+```
+@software{Urrutia_edpn-computer-vision-2022_2022,
+author = {Urrutia, Felipe and Minaya, Daniel and Toloza, Sebastian},
+doi = {10.5281/zenodo.1234},
+month = {6},
+title = {{edpn-computer-vision-2022}},
+url = {https://github.com/furrutiav/edpn-computer-vision-2022},
+version = {1.0.0},
+year = {2022}
+}
+```
+
