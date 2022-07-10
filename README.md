@@ -9,7 +9,7 @@
 * Daniel Minaya 
 * Sebastián Toloza
 
-## Motivación
+## Motivación [[3]](https://github.com/furrutiav/edpn-computer-vision-2022/main/README.md#referencias)
 
 La segmentación de imágenes es un método utilizado para particionar una imagen en múltiples segmentos u objetos constituyentes, lo cual la hace un componente esencial en muchos sistemas de comprensión visual, tales como, por ejemplo, el análisis de imágenes médicas, imágenes satelitales, entre otros.  
 
@@ -77,7 +77,8 @@ un factor de contraste, $\kappa$ es
 un término constante de fuerza comparable a la fuerza de un globo y el término $\text{div}\left( \frac{\nabla u}{|\nabla u|} \right)$ hace 
 referencia a la curvatura media de la interfaz.
 
-## Diferencias Finitas
+## Diferencias Finitas [[4]](https://github.com/furrutiav/edpn-computer-vision-2022/main/README.md#referencias)
+
 La implementación en este caso viene descrita por la relación:
 
 $$
@@ -117,11 +118,11 @@ $$
             (\min(D^{-x}u_i^n,0)^2 + \max(D^{+x}u_i^n,0)^2  + \min(D^{-y}u_i^n,0)^2 + \max(D^{+y}u_i^n,0)^2     )^{1/2}
 $$
 
-## Imágenes Básicas
+## Imágenes Básicas [[1]](https://github.com/furrutiav/edpn-computer-vision-2022/main/README.md#referencias)
 
 [imagenes pendientes]
 
-## Métricas
+## Métricas [[2]](https://github.com/furrutiav/edpn-computer-vision-2022/main/README.md#referencias)
 
 
 $$ 
@@ -145,15 +146,11 @@ al promedio armónico.
 
 ## Referencias
 
-[[1]](https://dl.acm.org/doi/abs/10.1145/344779.344972)
-Bertalmio, M., Sapiro, G., Caselles, V., & Ballester, C. (2000, July). Image inpainting. In Proceedings of the 27th annual conference on Computer graphics and interactive techniques (pp. 417-424)
+[1] M. M. Bongard. Pattern recognition. Rochelle Park, N.J.: Hayden Book Co., Spartan Books. (Original publication: Nauka Press, Moscow), 1967
 
-[[2]](https://link.springer.com/chapter/10.1007/0-387-21810-6_3)
-Weickert, J., & Kühne, G. (2003). Fast methods for implicit active contour models. In Geometric level set methods in imaging, vision, and graphics (pp. 43-57). Springer, New York, NY.
+[2] M. Everingham, L. VanGool, C. K. I. Williams, J. Winn, and A. Zisserman. The PASCAL Visual Object Classes Challenge 2012 (VOC2012) Results.
 
-[[3]](https://www.researchgate.net/publication/311103980_Fast_Dynamic_Image_Restoration_using_Laplace_equation_Based_Image_Inpainting)
-Agrawal, N., Sinha, P., Kumar, A., & Bagai, S. (2015). Fast & dynamic image restoration using Laplace equation based image inpainting. J Undergraduate Res Innovation, 1(2), 115-123.
+[3] S. Minaee, Y. Y. Boykov, F. Porikli, A. J. Plaza, N. Kehtarnavaz, and D. Terzopoulos. Image segmentation using deep learning: A survey. IEEE transactions on pattern analysis and machine intelligence, 2021
 
-[[4]](https://link.springer.com/chapter/10.1007/978-3-540-33267-1_12?noAccess=true)
-Frick, K., & Scherzer, O. (2007). Application of non-convex bv regularization for image segmentation. In Image Processing Based on Partial Differential Equations (pp. 211-228). Springer, Berlin, Heidelberg.
+[4] J. Weickert and G. Kühne. Fast methods for implicit active contour models. In Geometric level set methods in imaging, vision, and graphics. Springer, New York, NY, pages 43–57, 2003.
 
