@@ -1,49 +1,169 @@
-# Segmentación y pintado de imágenes
+# Segmentación de imágenes: Método del conjunto de nivel
 
-*Análisis Numérico de Ecuaciones en Derivadas Parciales: Teoría y Laboratorio*
+**Curso:** *MA5307-1 Análisis Numérico de Ecuaciones en Derivadas Parciales: Teoría y Laboratorio*
 
-**Integrantes** 
-* Daniel Minaya, 
-* Sebastián Toloza, 
-* Felipe Urrutia
+**Institución:** *Departamento de Ingeniería Matemática, Facultad de Ciencias Físicas y Matemáticas, Universidad de Chile*
 
-## Propuesta pre-proyecto
+**Autores:**
+* Felipe Urrutia 
+* Daniel Minaya 
+* Sebastián Toloza
 
-Resolver dos problemas distintos de EDP en procesamiento de imagenes, focalizando nuestro trabajo en el primero. (1) Segmentacion de imagenes (Image segmentation) y (2) Pintado de imagenes (Inpainting). La idea principal es utilizar (1) para encontrar un elemento de alto constraste sobre la imagen para luego aplicar (2) con la intencion de borrar dicho elemento preservando la informacion del borde. Para resolver (1) consideramos el metodo Level-set propuesto en [4, 2]. Mientras que para resolver (2) consideramos un metodo sencillo utilizando la ecuacion de Laplace [3]. Si durante el transcuso del proyecto logramos resolver satisfactoriamente el problema (1) y podemos mejorar el problema (2), entonces consideraremos una mejor aproximacion (2) con el modelo propuesto en [1].
+## Motivación [[3]](https://github.com/furrutiav/edpn-computer-vision-2022/main/README.md#referencias)
 
-**Figura 1.** *Esquema del procesamiento de una imagen*
+La segmentación de imágenes es un método utilizado para particionar una imagen en múltiples segmentos u objetos constituyentes, lo cual la hace un componente esencial en muchos sistemas de comprensión visual, tales como, por ejemplo, el análisis de imágenes médicas, imágenes satelitales, entre otros.  
 
-<!-- <img src="https://github.com/furrutiav/edpn-computer-vision-2022/blob/main/Esquema.png" alt="drawing" width="650"/> -->
+En este proyecto se buscó aplicar el método de segmentación de imágenes en niveles de gris a través de una EDP, haciendo uso del método de conjuntos de nivel.
 
-## Segmentación de imagenes
+## Método del Conjunto de Nivel
 
-[Notebook: BP](https://github.com/furrutiav/edpn-computer-vision-2022/blob/main/01%20Level-set%20Image%20segmentation.ipynb)
+Se considera una interfaz descrita por una curva simple cerrada $\Gamma$, la 
+cual separa un dominio $\Omega \subseteq \mathbb{R}^2$ en 
+dos sub-dominios distintos de áreas no nulas, $\Omega^+,\Omega^-$, de 
+fronteras respectivas $\partial \Omega^+, \partial \Omega ^-$, tales 
+que:
 
-<!-- <img src="https://github.com/furrutiav/edpn-computer-vision-2022/blob/main/matplot003.gif"> -->
+$$ \Omega^+ \cup \Omega^- \cup \Gamma = \Omega $$
 
-[Notebook: PASCAL](https://github.com/furrutiav/edpn-computer-vision-2022/blob/main/02%20Level-set%20Image%20segmentation.ipynb)
-## Pintado de imagenes
-[Notebook]()
+$$ \Omega^+ \cap \Omega^- = \emptyset $$
 
-## Futuras tareas
+$$ \partial \Omega^+ \cap \partial \Omega ^- = \Gamma $$
 
-*Ordenadas según prioridad*
-- [ ] Grid-search de hiper-parametros (tau, k, sigma, lambda)
-- [ ] Implementación de inpainting
+Una forma práctica de describir tanto la interfaz como los sub-dominios es mediante la definición de una función implícita $u(x)$ tal que: 
+
+$$ \Omega^+ = \lbrace{x \in \mathbb{R}^2 \mid u(x)>0\rbrace} $$
+
+$$ \Omega^- = \lbrace{x \in \mathbb{R}^2 \mid u(x)<0\rbrace} $$
+
+$$ \Gamma = \lbrace{x \in \mathbb{R}^2 \mid u(x)=0\rbrace} $$
+
+[figura 1 pendiente]
+
+## Ecuación en Derivadas Parciales: Modelo Geométrico
+
+Dada una curva inicial $C_0$, la 
+ecuación que se busca resolver para $u(x,t)$ es:
+
+$$
+        (\text{EDP})\quad 
+        \begin{cases}
+        \frac{\partial u}{\partial t} =g(x)|\nabla u| \left( \text{div}\left( \frac{\nabla u}{|\nabla u|} \right)+\kappa \right) & \text{en } \Omega \times (0,\infty) \\
+        u(x,0) = u_0(x) & \text{en } \Omega
+        \end{cases}
+$$
+
+donde $u_0(x)$ es 
+una función distancia con signo, dada por:
+
+$$
+        u_0(x)=
+        \begin{cases}
+        d(x,C_0) & \text{si $x$ está \textbf{dentro} de $C_0$}\\
+        0 & \text{si $x$ está \textbf{en} $C_0$}\\
+        -d(x,C_0)  & \text{si $x$ está \textbf{fuera} de $C_0$}
+        \end{cases}
+$$
+
+Tenemos que $g$ es una *stopping function*, dada por:
+
+$$
+        g(x) = \frac{1}{1+|\nabla f_{\sigma}(x)|^2/\lambda^2},
+$$
+  
+donde $f_{\sigma}$ corresponde 
+a la suavización de la imagen a partir de un kernel gaussiano de desviación estándar $\sigma$ y 
+$\lambda$ es 
+un factor de contraste, $\kappa$ es 
+un término constante de fuerza comparable a la fuerza de un globo y el término $\text{div}\left( \frac{\nabla u}{|\nabla u|} \right)$ hace 
+referencia a la curvatura media de la interfaz.
+
+## Diferencias Finitas [[4]](https://github.com/furrutiav/edpn-computer-vision-2022/main/README.md#referencias)
+
+La implementación en este caso viene descrita por la relación:
+
+$$
+        \left( I - \tau A(u^n)\right)u^{n+1} = u^n + \kappa\tau|\nabla^-u|^n g,
+$$
+
+donde los coeficientes de $A$ vienen 
+dados por:
+
+$$
+        A_{ij}(u^n):=
+        \begin{cases}
+        g_i|\nabla u|_i^n\left(\frac{2}{{|\nabla u|} _i^n+{|\nabla u|}_j^n}\right) & j \in N(i) \\
+        -g_i|\nabla u|_i^n \sum_{m \in N(i)} \left( \frac{2}{|\nabla u|_i^n+|\nabla u|_m^n} \right) & j=i\\
+        0 & \text{otro caso}
+        \end{cases}
+$$
+
+Las aproximaciones de $|\nabla u|$ vienen 
+dadas según los siguientes casos:
+1. Si $\kappa \leq 0$, entonces 
+$|\nabla u|_i^n     \approx  |\nabla^- u|_i^n $, que 
+viene dado por:
+
+$$
+            |\nabla^- u|_i^n = 
+            (\max(D^{-x}u_i^n,0)^2 + \min(D^{+x}u_i^n,0)^2 
+             + \max(D^{-y}u_i^n,0)^2 + \min(D^{+y}u_i^n,0)^2     )^{1/2}   
+$$
+
+2. Si $\kappa > 0$, entonces 
+$|\nabla u|_i^n     \approx  |\nabla^+ u|_i^n $, que 
+viene dado por:
+
+$$
+            |\nabla^+ u|_i^n =
+            (\min(D^{-x}u_i^n,0)^2 + \max(D^{+x}u_i^n,0)^2  + \min(D^{-y}u_i^n,0)^2 + \max(D^{+y}u_i^n,0)^2     )^{1/2}
+$$
+
+## Imágenes Básicas [[1]](https://github.com/furrutiav/edpn-computer-vision-2022/main/README.md#referencias)
+
+[imagenes pendientes]
+
+## Métricas [[2]](https://github.com/furrutiav/edpn-computer-vision-2022/main/README.md#referencias)
 
 
+$$ 
+    \texttt{Precision}(\Omega_\text{EDP}, +) = \frac{|\Omega_\text{EDP}^+ \cap \Omega_\text{target}^+|}{|\Omega^+_\text{EDP}|}
+$$
+
+$$
+    \texttt{Recall}(\Omega_\text{EDP}, +) = \frac{|\Omega_\text{EDP}^+ \cap \Omega_\text{target}^+|}{|\Omega_\text{target}^+|}
+$$
+
+$$
+    \texttt{F1-score}(\Omega_\text{EDP}, +) = \textit{HM}(\texttt{Precision}(\Omega_\text{EDP}, +),\texttt{Recall}(\Omega_\text{EDP}, +))
+$$
+
+donde *HM* corresponde 
+al promedio armónico.
+    
+## Imágenes Reales
+
+[imagenes pendientes]
 
 ## Referencias
 
-[[1]](https://dl.acm.org/doi/abs/10.1145/344779.344972)
-Bertalmio, M., Sapiro, G., Caselles, V., & Ballester, C. (2000, July). Image inpainting. In Proceedings of the 27th annual conference on Computer graphics and interactive techniques (pp. 417-424)
+[1] M. M. Bongard. Pattern recognition. Rochelle Park, N.J.: Hayden Book Co., Spartan Books. (Original publication: Nauka Press, Moscow), 1967
 
-[[2]](https://link.springer.com/chapter/10.1007/0-387-21810-6_3)
-Weickert, J., & Kühne, G. (2003). Fast methods for implicit active contour models. In Geometric level set methods in imaging, vision, and graphics (pp. 43-57). Springer, New York, NY.
+[2] M. Everingham, L. VanGool, C. K. I. Williams, J. Winn, and A. Zisserman. The PASCAL Visual Object Classes Challenge 2012 (VOC2012) Results.
 
-[[3]](https://www.researchgate.net/publication/311103980_Fast_Dynamic_Image_Restoration_using_Laplace_equation_Based_Image_Inpainting)
-Agrawal, N., Sinha, P., Kumar, A., & Bagai, S. (2015). Fast & dynamic image restoration using Laplace equation based image inpainting. J Undergraduate Res Innovation, 1(2), 115-123.
+[3] S. Minaee, Y. Y. Boykov, F. Porikli, A. J. Plaza, N. Kehtarnavaz, and D. Terzopoulos. Image segmentation using deep learning: A survey. IEEE transactions on pattern analysis and machine intelligence, 2021
 
-[[4]](https://link.springer.com/chapter/10.1007/978-3-540-33267-1_12?noAccess=true)
-Frick, K., & Scherzer, O. (2007). Application of non-convex bv regularization for image segmentation. In Image Processing Based on Partial Differential Equations (pp. 211-228). Springer, Berlin, Heidelberg.
+[4] J. Weickert and G. Kühne. Fast methods for implicit active contour models. In Geometric level set methods in imaging, vision, and graphics. Springer, New York, NY, pages 43–57, 2003.
+
+## Citar
+```
+@software{Urrutia_edpn-computer-vision-2022_2022,
+author = {Urrutia, Felipe and Minaya, Daniel and Toloza, Sebastian},
+doi = {10.5281/zenodo.1234},
+month = {6},
+title = {{edpn-computer-vision-2022}},
+url = {https://github.com/furrutiav/edpn-computer-vision-2022},
+version = {1.0.0},
+year = {2022}
+}
+```
 
