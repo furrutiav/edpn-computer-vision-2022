@@ -177,14 +177,15 @@ al promedio armónico.
 
 ## Citar
 ```
-@software{Urrutia_edpn-computer-vision-2022_2022,
-author = {Urrutia, Felipe and Minaya, Daniel and Toloza, Sebastian},
-doi = {10.5281/zenodo.1234},
-month = {6},
-title = {{edpn-computer-vision-2022}},
-url = {https://github.com/furrutiav/edpn-computer-vision-2022},
-version = {1.0.0},
-year = {2022}
+@software{
+        Urrutia_edpn-computer-vision-2022_2022,
+        author = {Urrutia, Felipe and Minaya, Daniel and Toloza, Sebastian},
+        doi = {10.5281/zenodo.1234},
+        month = {6},
+        title = {{edpn-computer-vision-2022}},
+        url = {https://github.com/furrutiav/edpn-computer-vision-2022},
+        version = {1.0.0},
+        year = {2022}
 }
 ```
 
