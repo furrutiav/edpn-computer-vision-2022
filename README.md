@@ -29,6 +29,8 @@ $$ \Omega^+ \cap \Omega^- = \emptyset $$
 
 $$ \partial \Omega^+ \cap \partial \Omega ^- = \Gamma $$
 
+<img align="right" height="190" src="https://github.com/furrutiav/edpn-computer-vision-2022/blob/main/Fig1.JPG">
+
 Una forma práctica de describir tanto la interfaz como los sub-dominios es mediante la definición de una función implícita $u(x)$ tal que: 
 
 $$ \Omega^+ = \lbrace{x \in \mathbb{R}^2 \mid u(x)>0\rbrace} $$
@@ -36,8 +38,6 @@ $$ \Omega^+ = \lbrace{x \in \mathbb{R}^2 \mid u(x)>0\rbrace} $$
 $$ \Omega^- = \lbrace{x \in \mathbb{R}^2 \mid u(x)<0\rbrace} $$
 
 $$ \Gamma = \lbrace{x \in \mathbb{R}^2 \mid u(x)=0\rbrace} $$
-
-[figura 1 pendiente]
 
 ## Ecuación en Derivadas Parciales: Modelo Geométrico
 
@@ -120,7 +120,13 @@ $$
 
 ## Imágenes Básicas [[1]](https://github.com/furrutiav/edpn-computer-vision-2022/main/README.md#referencias)
 
-[imagenes pendientes]
+<img width="400" src="https://github.com/furrutiav/edpn-computer-vision-2022/blob/main/BP_test_3.png">
+
+<img width="400" src="https://github.com/furrutiav/edpn-computer-vision-2022/blob/main/BP_test_4.png">
+
+<img width="400" src="https://github.com/furrutiav/edpn-computer-vision-2022/blob/main/BP_test_6.png">
+
+<img width="400" src="https://github.com/furrutiav/edpn-computer-vision-2022/blob/main/BP_test_7.png">
 
 ## Métricas [[2]](https://github.com/furrutiav/edpn-computer-vision-2022/main/README.md#referencias)
 
@@ -142,7 +148,14 @@ al promedio armónico.
     
 ## Imágenes Reales
 
-[imagenes pendientes]
+<img width="400" src="https://github.com/furrutiav/edpn-computer-vision-2022/blob/main/PASCAL_test_0.png">
+
+<img width="400" src="https://github.com/furrutiav/edpn-computer-vision-2022/blob/main/PASCAL_test_4.png">
+
+<img width="400" src="https://github.com/furrutiav/edpn-computer-vision-2022/blob/main/PASCAL_test_6.png">
+
+<img width="400" src="https://github.com/furrutiav/edpn-computer-vision-2022/blob/main/PASCAL_test_7.png">
+
 
 ## Referencias
 
